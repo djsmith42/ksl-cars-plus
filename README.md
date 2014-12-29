@@ -5,9 +5,9 @@ A Chrome extension that improves KSL cars.
 
 ## To build the extension:
  - git clone this repository
- - cd ksl-cars-plus
- - npm install
- - npm run build
+ - ```cd ksl-cars-plus```
+ - ```npm install```
+ - ```npm run build```
  
 ## To install the extension locally:
  - Navigate to chrome://extensions
