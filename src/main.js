@@ -2,15 +2,33 @@ console.log('----- KSL Cars Plus extension -----');
 
 var edmunds = require('./edmunds.js');
 var scraper = require('./scraper.js');
+var display = require('./display.js');
+var $ = require('jquery');
 
 var vehicleInfo = scraper.scrapeVehicleInfo();
 
 console.log("[KSL Cars Plus] Vehicle Info:", vehicleInfo);
 
-edmunds.getStyles(vehicleInfo).then(function(styles) {
-  edmunds.getValues(vehicleInfo, styles).then(function(stylesWithPrices) {
-    console.log("stylesWithPrices:", stylesWithPrices);
-  });
+var priceModel = {};
+
+edmunds.getPrices(vehicleInfo).then(function() {
+  // TODO Indicate we are done?
+}, function() {
+  // TODO Handle error?
+}, function(price) {
+  console.log("price:", price);
+  if (!priceModel[price.style]) {
+    priceModel[price.style] = {};
+  }
+  if (!priceModel[price.style][price.condition]) {
+    priceModel[price.style][price.condition] = {};
+  }
+  priceModel[price.style][price.condition] = price;
+
+  var html = display.makeHtml(priceModel);
+
+  $('#ksl-cars-plus').remove();
+  $("#widgetSpecifications").before(html);
 });
 
 module.exports = {}
