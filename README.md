@@ -13,7 +13,7 @@ A Chrome extension that improves KSL cars.
  - Navigate to chrome://extensions
  - Check the "Developer mode" checkbox
  - Click "Load unpacked extension..."
- - Browse to the ksl-cars-plus folder (wher you git cloned it)
+ - Browse to the ksl-cars-plus folder (where you git cloned it)
 
 ## To hack on the extension:
  - Make sure "npm run build" is running
