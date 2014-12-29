@@ -10,13 +10,13 @@ To build the extension:
  - npm run build
  
  To install the extension locally:
-  - Navigate to chrome://extensions
-  - Check the "Developer mode" checkbox
-  - Click "Load unpacked extension..."
-  - Browse to the ksl-cars-plus folder (wher you git cloned it)
+ - Navigate to chrome://extensions
+ - Check the "Developer mode" checkbox
+ - Click "Load unpacked extension..."
+ - Browse to the ksl-cars-plus folder (wher you git cloned it)
 
  To hack on the extension:
-  - Make sure "npm run build" is running
-  - Make your changes
-  - Go to chrome://extensions and refresh the page (why is this necessary? this sucks)
-  - Go to a KSL cars page and refresh it
+ - Make sure "npm run build" is running
+ - Make your changes
+ - Go to chrome://extensions and refresh the page (why is this necessary? this sucks)
+ - Go to a KSL cars page and refresh it
