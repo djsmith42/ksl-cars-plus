@@ -6,7 +6,8 @@
   "author": "Dave Smith",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --progress --colors --watch --display-error-deails"
+    "dev": "webpack --progress --colors --watch --display-error-deails",
+    "build": "./bin/build"
   },
   "dependencies": {},
   "devDependencies": {
