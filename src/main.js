@@ -16,7 +16,6 @@ edmunds.getPrices(vehicleInfo).then(function() {
 }, function() {
   // TODO Handle error?
 }, function(price) {
-  console.log("price:", price);
   if (!priceModel[price.style]) {
     priceModel[price.style] = {};
   }
