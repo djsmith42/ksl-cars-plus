@@ -3,6 +3,8 @@ KSL Cars Plus
 
 A Chrome extension that improves KSL cars.
 
+[Install for free from the Chrome web store](https://chrome.google.com/webstore/detail/ksl-cars-plus/knflggjaaeoojimommoemjoijefaefpi)
+
 ## To build the extension:
  - git clone this repository
  - ```cd ksl-cars-plus```
