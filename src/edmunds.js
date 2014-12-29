@@ -1,8 +1,8 @@
 var $ = require('jquery');
 var config = require('./config.js');
 
-var CONDITIONS = ['Outstanding', 'Clean', 'Average', 'Rough'];
-var API_MILLIS = 100;
+var CONDITIONS = ['Rough', 'Average', 'Clean', 'Outstanding'];
+var API_MILLIS = 300;
 
 var _getStyles = function(vehicleInfo) {
   var deferred = $.Deferred();
