@@ -2,6 +2,7 @@ var $ = require('jquery');
 var config = require('./config.js');
 
 var CONDITIONS = ['Outstanding', 'Clean', 'Average', 'Rough'];
+var API_MILLIS = 100;
 
 var _getStyles = function(vehicleInfo) {
   var deferred = $.Deferred();
@@ -38,7 +39,7 @@ module.exports = {
               deferred.notify(price);
             });
           }, millis);
-          millis += 100;
+          millis += API_MILLIS;
         });
       });
     });
