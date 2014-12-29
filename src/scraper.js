@@ -20,6 +20,10 @@ module.exports = {
         break;
       }
 
+      if (value == 'not specified') {
+        value = null;
+      }
+
       ret[name] = value;
     });
     return ret;
