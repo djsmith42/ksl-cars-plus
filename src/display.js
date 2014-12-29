@@ -7,12 +7,14 @@ var _money = function(x) {
 
 module.exports = {
   makeHtml: function(priceModel) {
+    var isDealer = $('#widgetDealer').height() > 0;
     var html = 
       "<div id='ksl-cars-plus'>" +
       "<style>" +
       "  #ksl-cars-plus table td.price { text-align: right }" +
       "  #ksl-cars-plus table th.condition { text-align: right; width: 80px; }" +
       "  #ksl-cars-plus table td.trim { background-color: #f1f1f1 }" +
+      "  #ksl-cars-plus table tr.highlight td { font-weight: bold }" +
       "</style>" +
       "<h2>Edmunds Prices for this car</h2>" +
       "<table>" +
@@ -27,14 +29,14 @@ module.exports = {
       html += "<tr>";
       html += "  <td colspan='5' class='trim'>" + style + "</td>";
       html += "</tr>";
-      html += "<tr>";
+      html += "<tr class='" + (isDealer ? 'highlight' : '') + "'>";
       html += "  <td>  &nbsp;&nbsp; Retail:</td>";
       html += "  <td class='price'>" + (conditions.Rough       ? _money(conditions.Rough.retail)        : '') + "</td>";
       html += "  <td class='price'>" + (conditions.Average     ? _money(conditions.Average.retail)      : '') + "</td>";
       html += "  <td class='price'>" + (conditions.Clean       ? _money(conditions.Clean.retail)        : '')+ "</td>";
       html += "  <td class='price'>" + (conditions.Outstanding ? _money(conditions.Outstanding.retail)  : '') + "</td>";
       html += "</tr>";
-      html += "<tr>";
+      html += "<tr class='" + (!isDealer ? 'highlight' : '') + "'>";
       html += "  <td>  &nbsp;&nbsp; Private Party:</td>";
       html += "  <td class='price'>" + (conditions.Rough       ? _money(conditions.Rough.privateParty)        : '') + "</td>";
       html += "  <td class='price'>" + (conditions.Average     ? _money(conditions.Average.privateParty)      : '') + "</td>";
