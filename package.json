@@ -1,0 +1,18 @@
+{
+  "name": "ksl-cars-plus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "author": "Dave Smith",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --progress --colors --watch --display-error-deails"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jquery": "^2.1.3",
+    "file-loader": "^0.8.1",
+    "webpack": "^1.4.13"
+  }
+}
